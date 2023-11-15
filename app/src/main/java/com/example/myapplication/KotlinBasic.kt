@@ -152,7 +152,7 @@ package com.example.myapplication
 //    }
 //}
 //
-//// Implement the interface in another class
+//  Implement the interface in another class
 //class Rectangle(val width: Double, val height: Double) : Shape {
 //    override fun area(): Double {
 //        return width * height
@@ -333,50 +333,113 @@ package com.example.myapplication
 
 //  scope function
 
-class Company(){
-    lateinit var name : String
-    lateinit var objective  : String
-    lateinit var founder : String
-}
+//class Company(){
+//    lateinit var name : String
+//    lateinit var objective  : String
+//    lateinit var founder : String
+//}
+
+//fun main(){
+//
+//// we have apply with function and apply function Or Also Function let function
+//
+//    var name:String = "JHON"
+//
+//    name.let {
+//        println("the length of name is " + it.length)
+//        println("the name is " + it)
+//        println("the reversed is " + it.reversed())
+//
+//    }
+//
+//    val company = Company().apply {
+//        name= "Android App Development"
+//        objective = "Computer Science"
+//        founder ="Android Inc. was founded in Palo Alto, California, in October 2003 by Andy Rubin, Rich Miner, Nick Sears, and Chris White."
+//    }
+//
+//    println(company.name)
+//    println(company.objective)
+//    println(company.founder)
+//
+//    with(company){
+//        println("$name")
+//    }
+//
+//    company.also {
+//        it.name = "Web Developer"
+//        it.objective="Computer Science"
+//        it.founder ="Tim Berners-Lee, a British scientist,"
+//    }
+//
+//    println(company.name)
+//    println(company.objective)
+//    println(company.founder)
+//}
+
+//  COLLECTION
 
 fun main(){
 
-// we have apply with function and apply function Or Also Function let function
+    val list = listOf("Australia","England","Pakistan","India", listOf(1,2,3,4))
+    println(list)
+    println()
 
-    var name:String = "JHON"
+    val Mlist = mutableListOf<Any>("Sumsung","Iphone","Sony","Nokia")
+    println(Mlist)
+    Mlist.add(3,"Tecno")
+    println(Mlist)
+    println()
 
-    name.let {
-        println("the length of name is " + it.length)
-        println("the name is " + it)
-        println("the reversed is " + it.reversed())
+    val Slist= mutableListOf<Any>("Realme",4)
+    Mlist.addAll(Slist)
+    println(Mlist)
+    println()
 
-    }
+    println("SET COLLECTION ")
 
-    val company = Company().apply {
-        name= "Android App Development"
-        objective = "Computer Science"
-        founder ="Android Inc. was founded in Palo Alto, California, in October 2003 by Andy Rubin, Rich Miner, Nick Sears, and Chris White."
-    }
+    val set = setOf<Any>("laptop","computer","Tv",1,true)
+    println(set)
+    println()
+    val Sset = mutableSetOf<Any>("Telenor","Jazz","Ufone",false)
+    println(Sset)
 
-    println(company.name)
-    println(company.objective)
-    println(company.founder)
+    Sset.add("Zong")
+    println(Sset)
+    println()
 
-    with(company){
-        println("$name")
-    }
+    val Mset = mutableSetOf<Any>("FaceBook","Youtube",true)
+    Sset.addAll(Mset)
+    println(Sset)
+    println()
 
-    company.also {
-        it.name = "Web Developer"
-        it.objective="Computer Science"
-        it.founder ="Tim Berners-Lee, a British scientist,"
-    }
 
-    println(company.name)
-    println(company.objective)
-    println(company.founder)
+    print("MAP COLLECTION")
+    println()
+
+    val map = mapOf<Int,String>(1 to "Sajid",2 to "Wajid", 3 to "Wahid")
+    println(map)
+    println()
+
+    val Smap = mutableMapOf<String, String>("John" to "Smith","shane" to "Watson")
+    println(Smap)
+    println()
+    
+    val Mmap = mutableMapOf<String ,String>("Head" to "Tim","David" to "Warner")
+    Smap.putAll(Mmap)
+    println(Smap)
+    println()
+
+
+    println("ARRAY LIST")
+
+    val array = ArrayList<String>()
+    array.add("Hello")
+    array.add("Word")
+
+    array[1]="HY"
+//    arrar,removeit[1]
+    array.remove("Hello")
+    println(array.toString())
+
 }
-
-
-
-
